@@ -1,0 +1,221 @@
+.anime-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100%;
+}
+
+.anime-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.anime-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.anime-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.anime-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.anime-card:hover .anime-image img {
+  transform: scale(1.05);
+}
+
+.anime-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.anime-card:hover .anime-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.anime-card:hover .play-icon {
+  transform: scale(1);
+}
+
+/* Badges */
+.rating-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.episode-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--primary);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.anime-content {
+  padding: 1rem;
+}
+
+.anime-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.anime-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.meta-item.type {
+  background: #e5e7eb;
+  color: var(--dark);
+}
+
+.meta-item.status {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.meta-item.status.ongoing {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.meta-item.status.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.anime-season {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+/* Skeleton Loading */
+.anime-card.skeleton .anime-image {
+  background: #e5e7eb;
+}
+
+.anime-card.skeleton .skeleton-image {
+  width: 100%;
+  height: 100%;
+  background: #e5e7eb;
+}
+
+.anime-card.skeleton .skeleton-text {
+  height: 16px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.anime-card.skeleton .skeleton-meta {
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  width: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .anime-image {
+    height: 200px;
+  }
+
+  .anime-content {
+    padding: 0.75rem;
+  }
+
+  .anime-title {
+    font-size: 0.9rem;
+  }
+
+  .play-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .anime-image {
+    height: 180px;
+  }
+
+  .anime-content {
+    padding: 0.5rem;
+  }
+}
