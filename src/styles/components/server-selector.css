@@ -1,0 +1,158 @@
+.server-selector {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.server-title {
+  margin-bottom: 1rem;
+  color: var(--dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.server-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.server-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.server-item:hover {
+  border-color: var(--primary-light);
+  background: #fefce8;
+}
+
+.server-item.active {
+  border-color: var(--primary);
+  background: #fffbeb;
+}
+
+.server-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.server-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--gradient-primary);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.server-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.server-name {
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.server-quality {
+  font-size: 0.75rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.server-status {
+  display: flex;
+  align-items: center;
+}
+
+.active-indicator {
+  color: var(--primary);
+}
+
+.inactive-indicator {
+  width: 8px;
+  height: 8px;
+  background: #cbd5e1;
+  border-radius: 50%;
+}
+
+.current-server-info {
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  border-left: 4px solid var(--primary);
+}
+
+.current-server-info h5 {
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.current-server-info p {
+  margin-bottom: 0.5rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.server-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.server-link:hover {
+  color: var(--primary-dark);
+}
+
+.no-servers {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray);
+}
+
+.no-servers p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .server-selector {
+    padding: 1rem;
+  }
+
+  .server-item {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .server-info {
+    gap: 0.5rem;
+  }
+
+  .server-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .server-name {
+    font-size: 0.85rem;
+  }
+}
