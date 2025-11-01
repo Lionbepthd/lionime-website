@@ -9,7 +9,11 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
   },
-  // Tambahkan publicDir yang benar
   publicDir: 'public'
 })
