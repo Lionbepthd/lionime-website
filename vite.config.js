@@ -9,5 +9,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-  }
+  },
+  // Tambahkan publicDir yang benar
+  publicDir: 'public'
 })
