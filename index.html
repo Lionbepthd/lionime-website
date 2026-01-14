@@ -3,54 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Aplikasi Lionime - Nonton Anime Gratis</title>
+    <title>Download Aplikasi Lionime - Nonton Anime Gratis Tanpa Iklan</title>
 
-    <!-- Meta tags SEO -->
-    <meta name="description" content="Download aplikasi Lionime untuk menonton anime subtitle Indonesia terbaru dan berkualitas tinggi secara gratis.">
-    <meta name="keywords" content="download aplikasi Lionime, nonton anime, anime Indo, streaming anime gratis">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Download aplikasi Lionime untuk akses ribuan judul anime subtitle Indonesia tanpa iklan. Cepat, mudah, dan gratis!">
+    <meta name="keywords" content="download Lionime, aplikasi anime, nonton anime gratis, anime indonesia, tanpa iklan">
     <meta name="author" content="Lionime Team">
-
-    <!-- Open Graph / SEO Social Media -->
+    
+    <!-- Open Graph -->
     <meta property="og:title" content="Download Aplikasi Lionime">
-    <meta property="og:description" content="Akses ribuan judul anime favoritmu kapan saja.">
+    <meta property="og:description" content="Nikmati anime favoritmu tanpa gangguan iklan. Unduh sekarang!">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lionime-download.vercel.app/">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            padding: 80px 20px;
             text-align: center;
-            padding: 50px;
+            background: url('https://placehold.co/1200x600/121212/FF6B6B?text=Lionime+App') no-repeat center center/cover;
+            position: relative;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
         }
-        h1 { color: #ff6b6b; }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ff6b6b;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #ddd;
+        }
+
         .btn-download {
             display: inline-block;
-            padding: 15px 30px;
-            background: #4CAF50;
+            padding: 18px 36px;
+            background: #ff6b6b;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            margin-top: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
         }
+
         .btn-download:hover {
-            background: #45a049;
+            transform: translateY(-5px);
+            background: #ff5252;
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        .features {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff6b6b;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 107, 107, 0.1);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .testimonials {
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff6b6b;
+        }
+
+        .testimonial-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            color: gold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .btn-download { font-size: 1.1rem; padding: 15px 30px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Download Aplikasi Lionime</h1>
-        <p>Akses anime favoritmu kapan saja secara gratis dan tanpa iklan!</p>
-        <a href="/path-to-your-apk-file.apk" class="btn-download">Unduh Sekarang</a>
-    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Download Aplikasi Lionime</h1>
+            <p>Nikmati ribuan judul anime subtitle Indonesia tanpa iklan dan buffering! Akses cepat, tampilan modern, dan pengalaman menonton terbaik.</p>
+            <a href="/Lionime_v1.0.apk" class="btn-download">
+                <i class="fas fa-download"></i> Unduh Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Mengapa Harus Download Lionime?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-play-circle"></i>
+                <h3>Anime Terlengkap</h3>
+                <p>Koleksi anime dari berbagai genre, subtitle Indonesia, dan update cepat.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Cepat & Stabil</h3>
+                <p>Tidak ada buffering, akses cepat, dan kualitas video HD.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Tanpa Iklan</h3>
+                <p>Pengalaman menonton tanpa gangguan iklan yang mengganggu.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Apa Kata Pengguna?</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>"Aplikasi ini mantap! Anime banyak, subtitle rapi, gak ada iklan. Pokoknya top deh!"</p>
+                <div class="rating">★★★★★</div>
+                <strong>Rizky A.</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"Akhirnya nemu juga aplikasi anime tanpa iklan. Loading cepat banget."</p>
+                <div class="rating">★★★★★</div>
+                <strong>Salsa B.</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"Recommended banget buat pecinta anime. Fiturnya lengkap dan ringan di HP."</p>
+                <div class="rating">★★★★★</div>
+                <strong>Faisal C.</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Lionime App. Hak Cipta Dilindungi.</p>
+        <p>Download dan nikmati anime favoritmu sekarang juga!</p>
+    </footer>
+
 </body>
 </html>
